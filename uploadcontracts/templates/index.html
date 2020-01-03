@@ -1,0 +1,20 @@
+{% block css %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css" />
+{% endblock %}
+
+<body>
+    <div class="container">
+          <div class="row p-4" id="dropzone">
+              <div class="col-12">
+                  <form class="dropzone needsclick" id="demo-upload" method="POST" action="{% url 'upload_file' %}">
+                      {% csrf_token %}
+                      <div class="dz-message needsclick">
+                        Drop files here or click to upload.<BR>
+                      </div>
+                  </form>
+              </div>
+          </div>
+    </div>
+</body>
